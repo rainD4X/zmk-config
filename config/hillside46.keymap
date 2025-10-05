@@ -14,14 +14,13 @@
 #define COLEMK_L   1
 #define MEDIA_L    2
 #define NAV_L      3
-#define MOUSE_L    4
-#define SYM_L      5
-#define NUM_L      6
-#define FUN_L      7
-#define FUN2_L     8
-#define QFLAT_L    9
-#define SHIFT_L   10
-#define TOUHOU_L  11
+#define SYM_L      4
+#define NUM_L      5
+#define FUN_L      6
+#define FUN2_L     7
+#define QFLAT_L    8
+#define SHIFT_L    9
+#define TOUHOU_L  10
 
 / {
         keymap {
@@ -39,7 +38,7 @@
 &none    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &none
 &none    &mt LGUI A    &mt LALT S    &mt LCTRL D   &mt LSHFT F   &kp  G                                                                         &kp  H        &mt LSHFT J   &mt LCTRL K   &mt LALT L    &mt LGUI SEMI &none
 &none    &kp  Z        &mt RALT X    &kp  C        &kp  V        &kp  B        &none                                              &none         &kp  N        &kp  M        &kp  COMMA    &mt RALT DOT  &kp  SLASH    &none
-                                                   &none         &lt 2 ESC     &lt 3 SPACE   &lt 4 TAB              &lt 5 RET     &lt 6 BSPC    &lt 7 DEL     &lt 8 K_CMENU
+                                                   &none         &lt 2 ESC     &lt 3 SPACE   &kp TAB                &lt 5 RET     &lt 6 BSPC    &lt 7 DEL     &lt 8 K_CMENU
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -57,7 +56,7 @@
 &none    &kp  Q        &kp  W        &kp  F        &kp  P        &kp  B                                                                         &kp  J        &kp  L        &kp  U        &kp  Y        &kp  SEMI     &none
 &none    &mt LGUI A    &mt LALT R    &mt LCTRL S   &mt LSHFT T   &kp  G                                                                         &kp  M        &mt LSHFT N   &mt LCTRL E   &mt LALT I    &mt LGUI O    &none
 &none    &kp  Z        &kp  X        &kp  C        &kp  D        &kp  V        &none                                              &none         &kp  K        &kp  H        &kp  COMMA    &kp  DOT      &kp  SLASH    &none
-                                                   &none         &lt 2 ESC     &lt 3 SPACE   &lt 4 TAB              &lt 5 RET     &lt 6 BSPC    &lt 7 DEL     &lt 8 K_CMENU
+                                                   &none         &lt 2 ESC     &lt 3 SPACE   &kp TAB                &lt 5 RET     &lt 6 BSPC    &lt 7 DEL     &lt 8 K_CMENU
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -94,24 +93,6 @@
 &none         &kp LGUI     &kp  LALT    &kp  LCTRL    &kp LSHFT   &none                                                            &caps_word  &kp LEFT    &kp DOWN  &kp RIGHT     &kp PG_DN  &none
 &none         &none        &kp  RALT    &none         &none       &none         &none                                    &kp CAPS  &kp LC(Z)   &kp LC(X)   &kp LC(C) &kp LC(V)     &kp LC(Y)   &none
                                                       &trans       &none        &trans       &none           &kp RET     &kp BSPC   &kp DEL   &none
-                        >;
-
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-
-                mouse_layer {
-/* NAV
- * -------------------------------------------------------------------------------------------------------------------------------------
- * |       | QWERTY| COLEMK| L_FLAT | L_SHFT| LTH |-----------------------------------|       | WHL_L | MUP   | WHL_L | WHL_UP |      |
- * |       | LGUI  | LALT  | LCTRL | LSHFT |      |-----------------------------------|       | MLEFT | MDOWN | MRIGHT| WHL_DN |      |
- * |       |       | RALT  |       |       |      |       |-------------------|       | Undo  | Cut   | Copy  | Paste | Redo   |      |
- *                                 |       |      |       |       |---|       | MCLK  | LCLK  | RCLK  |
- */
-                        bindings = <
-&none         &to QWERTY_L &to COLEMK_L &to QFLAT_L   &to SHIFT_L &to TOUHOU_L                                                            &none       &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT    &msc SCRL_UP    &none
-&none         &kp LGUI     &kp  LALT    &kp  LCTRL    &kp LSHFT   &none                                                                   &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT    &msc SCRL_DOWN  &none
-&none         &none        &kp  RALT    &none         &none       &none         &none                                      &none          &kp LC(Z)   &kp LC(X)      &kp LC(C)      &kp LC(V)          &kp LC(Y)       &none
-                                                      &none       &none        &trans       &none           &mkp MCLK      &mkp LCLK      &mkp RCLK   &none
                         >;
 
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
