@@ -24,6 +24,10 @@
 #define SHIFT_L   10
 #define TOUHOU_L  11
 
+&mt {
+    flavor = "tap-preferred";
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
