@@ -69,6 +69,57 @@
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
+                flat_layer {
+/* FLAT QWERTY
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * |       |   Q   |   W   |   E   |   R   |   T   |------------------------------------ |   Y   |   U   |   I   |   O   |   P   |       |
+ * |       |   A   |   S   |   D   |   F   |   G   |-------------------------------------|   H   |   J   |   K   |   L   |   ;   |       |
+ * |       |   Z   |   X   |   C   |   V   |   B   |  XXX  |---------------------|  XXX  |   N   |   M   |   ,   |   .   |   /   |       |
+ *                                 |  XXX  |  ESC  |  SPC  | TAB   |-----|  RET  |  BSPC |  DEL  | CMENU |
+ */
+                        bindings = <
+&none    &kp Q    &kp W    &kp E    &kp  R    &kp  T                                                                          &kp  Y    &kp U     &kp I    &kp O    &kp P    &none
+&none    &kp A    &kp S    &kp D    &kp  F    &kp  G                                                                          &kp  H    &kp J     &kp K    &kp L    &kp SEMI &none
+&none    &kp Z    &kp X    &kp C    &kp  V    &kp  B      &none                                            &none    &kp  N    &kp  M    &kp COMMA &kp DOT  &kp  SLASH    &none
+                                              &mo NAV_L   &kp ESC    &kp SPACE    &kp TAB         &kp RET    &kp BSPC &kp DEL   &mo NAV_L
+                        >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                };
+
+                shift_layer {
+/* SHIFTED QWERTY
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * |       |   `   |   Q   |   W   |   E   |   R   |------------------------------------ |   Y   |   U   |   I   |   O   |   P   |       |
+ * |       |  CTRL |   A   |   S   |   D   |   F   |-------------------------------------|   H   |   J   |   K   |   L   |   ;   |       |
+ * |       | SHIFT |   Z   |   X   |   C   |   V   |  XXX  |---------------------|  XXX  |   N   |   M   |   ,   |   .   |   /   |       |
+ *                                 |  XXX  |  ESC  |  SPC  | TAB   |-----|  RET  |  BSPC |  DEL  | CMENU |
+ */
+                        bindings = <
+&none    &kp GRAVE &kp Q    &kp W    &kp E    &kp  R                                                                          &kp  Y    &kp U     &kp I    &kp O    &kp P    &none
+&none    &kp LCTRL &kp A    &kp S    &kp D    &kp  F                                                                          &kp  H    &kp J     &kp K    &kp L    &kp SEMI &none
+&none    &kp LSHFT &kp Z    &kp X    &kp C    &kp  V       &none                                             &none    &kp  N  &kp  M    &kp COMMA &kp DOT  &kp  SLASH    &none
+                                              &mo NAV_L    &kp ESC    &kp SPACE    &kp TAB        &kp RET    &kp BSPC &kp DEL &mo NAV_L
+                        >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                };
+
+                touhou_layer {
+/* FLAT QWERTY
+ * --------------------------------------------------------------------------------------------------------------------------------------
+ * |       |   Q   |   W   |   E   |   R   |   T   |------------------------------------ |   Y   |   U   |   I   |   O   |   P   |       |
+ * |       |   A   |   S   |   D   |   F   |   G   |-------------------------------------|   H   |   J   |   K   |   L   |   ;   |       |
+ * |       |   Z   |   X   |   C   |   V   |   B   |  XXX  |---------------------|  XXX  |   N   |   M   |   ,   |   .   |   /   |       |
+ *                                 |  XXX  |  ESC  |  SPC  | TAB   |-----|  RET  |  BSPC |  DEL  | CMENU |
+ */
+                        bindings = <
+&none    &kp Q     &kp W     &kp E     &kp  R      &kp  T                                                                          &kp  Y    &kp U     &kp UP   &kp O    &kp P    &none
+&none    &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT   &kp  G                                                                          &kp  H    &kp LEFT &kp DOWN &kp RIGHT &kp SEMI &none
+&none    &kp Z     &kp X     &kp C     &kp  V      &kp  B      &none                                            &none    &kp  N    &kp  M    &kp COMMA &kp DOT  &kp  SLASH    &none
+                                       &mo NAV_L   &kp ESC     &kp SPACE    &kp TAB         &kp RET    &kp BSPC &kp DEL  &mo NAV_L
+                        >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                };
+
                 media_layer {
 /* MEDIA
  * -------------------------------------------------------------------------------------------------------------------------------------
@@ -191,57 +242,6 @@
                                               &none      &kp ESC         &kp SPACE      &kp TAB         &none       &none       &none      &trans
                         >;
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-                flat_layer {
-/* FLAT QWERTY
- * --------------------------------------------------------------------------------------------------------------------------------------
- * |       |   Q   |   W   |   E   |   R   |   T   |------------------------------------ |   Y   |   U   |   I   |   O   |   P   |       |
- * |       |   A   |   S   |   D   |   F   |   G   |-------------------------------------|   H   |   J   |   K   |   L   |   ;   |       |
- * |       |   Z   |   X   |   C   |   V   |   B   |  XXX  |---------------------|  XXX  |   N   |   M   |   ,   |   .   |   /   |       |
- *                                 |  XXX  |  ESC  |  SPC  | TAB   |-----|  RET  |  BSPC |  DEL  | CMENU |
- */
-                        bindings = <
-&none    &kp Q    &kp W    &kp E    &kp  R    &kp  T                                                                          &kp  Y    &kp U     &kp I    &kp O    &kp P    &none
-&none    &kp A    &kp S    &kp D    &kp  F    &kp  G                                                                          &kp  H    &kp J     &kp K    &kp L    &kp SEMI &none
-&none    &kp Z    &kp X    &kp C    &kp  V    &kp  B      &none                                            &none    &kp  N    &kp  M    &kp COMMA &kp DOT  &kp  SLASH    &none
-                                              &mo NAV_L   &kp ESC    &kp SPACE    &kp TAB         &kp RET    &kp BSPC &kp DEL   &mo NAV_L
-                        >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-
-                shift_layer {
-/* SHIFTED QWERTY
- * --------------------------------------------------------------------------------------------------------------------------------------
- * |       |   `   |   Q   |   W   |   E   |   R   |------------------------------------ |   Y   |   U   |   I   |   O   |   P   |       |
- * |       |  CTRL |   A   |   S   |   D   |   F   |-------------------------------------|   H   |   J   |   K   |   L   |   ;   |       |
- * |       | SHIFT |   Z   |   X   |   C   |   V   |  XXX  |---------------------|  XXX  |   N   |   M   |   ,   |   .   |   /   |       |
- *                                 |  XXX  |  ESC  |  SPC  | TAB   |-----|  RET  |  BSPC |  DEL  | CMENU |
- */
-                        bindings = <
-&none    &kp GRAVE &kp Q    &kp W    &kp E    &kp  R                                                                          &kp  Y    &kp U     &kp I    &kp O    &kp P    &none
-&none    &kp LCTRL &kp A    &kp S    &kp D    &kp  F                                                                          &kp  H    &kp J     &kp K    &kp L    &kp SEMI &none
-&none    &kp LSHFT &kp Z    &kp X    &kp C    &kp  V       &none                                             &none    &kp  N  &kp  M    &kp COMMA &kp DOT  &kp  SLASH    &none
-                                              &mo NAV_L    &kp ESC    &kp SPACE    &kp TAB        &kp RET    &kp BSPC &kp DEL &mo NAV_L
-                        >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-
-                touhou_layer {
-/* FLAT QWERTY
- * --------------------------------------------------------------------------------------------------------------------------------------
- * |       |   Q   |   W   |   E   |   R   |   T   |------------------------------------ |   Y   |   U   |   I   |   O   |   P   |       |
- * |       |   A   |   S   |   D   |   F   |   G   |-------------------------------------|   H   |   J   |   K   |   L   |   ;   |       |
- * |       |   Z   |   X   |   C   |   V   |   B   |  XXX  |---------------------|  XXX  |   N   |   M   |   ,   |   .   |   /   |       |
- *                                 |  XXX  |  ESC  |  SPC  | TAB   |-----|  RET  |  BSPC |  DEL  | CMENU |
- */
-                        bindings = <
-&none    &kp Q     &kp W     &kp E     &kp  R      &kp  T                                                                          &kp  Y    &kp U     &kp UP   &kp O    &kp P    &none
-&none    &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT   &kp  G                                                                          &kp  H    &kp LEFT &kp DOWN &kp RIGHT &kp SEMI &none
-&none    &kp Z     &kp X     &kp C     &kp  V      &kp  B      &none                                            &none    &kp  N    &kp  M    &kp COMMA &kp DOT  &kp  SLASH    &none
-                                       &mo NAV_L   &kp ESC     &kp SPACE    &kp TAB         &kp RET    &kp BSPC &kp DEL  &mo NAV_L
-                        >;
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
         };
 };
