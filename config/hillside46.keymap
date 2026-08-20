@@ -37,13 +37,13 @@
 /* QWERTY
  * --------------------------------------------------------------------------------------------------------------------------------------
  * |       |   Q   |   W   |   E   |   R   |   T   |------------------------------------ |   Y   |   U   |   I   |   O   |   P   |       |
- * |       |   A   |   S   |   D   |   F   |   G   |-------------------------------------|   H   |   J   |   K   |   L   |   ;   |       |
+ * |       |   A   |   S   |   D   |   F   |   G   |-------------------------------------|   H   |   J   |   K   |   L   |   '   |       |
  * |       |   Z   |   X   |   C   |   V   |   B   |  XXX  |---------------------|  XXX  |   N   |   M   |   ,   |   .   |   /   |       |
  *                                 |  XXX  |  ESC  |  SPC  | TAB   |-----|  RET  |  BSPC |  DEL  | CMENU |
  */
                         bindings = <
 &none    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &none
-&none    &mt LGUI A    &mt LALT S    &mt LCTRL D   &mt LSHFT F   &kp  G                                                                         &kp  H        &mt LSHFT J   &mt LCTRL K   &mt LALT L    &mt LGUI SEMI &none
+&none    &mt LGUI A    &mt LALT S    &mt LCTRL D   &mt LSHFT F   &kp  G                                                                         &kp  H        &mt LSHFT J   &mt LCTRL K   &mt LALT L    &mt LGUI SQT  &none
 &none    &kp  Z        &mt RALT X    &kp  C        &kp  V        &kp  B        &none                                              &none         &kp  N        &kp  M        &kp  COMMA    &mt RALT DOT  &kp  SLASH    &none
                                                    &none         &lt 5 ESC     &lt 6 SPACE   &lt 7 TAB              &lt 8 RET     &lt 9 BSPC    &lt 10 DEL    &lt 11 K_CMENU
                         >;
@@ -54,7 +54,7 @@
                 colemak_layer {
 /* COLEMAK-DH
  * ---------------------------------------------------------------------------------------------------------------------------------------
- * |       |   Q   |   W   |   F   |   P   |   B   |--------------------------------------|   J   |   L   |   U   |   Y   |   ;   |       |
+ * |       |   Q   |   W   |   F   |   P   |   B   |--------------------------------------|   J   |   L   |   U   |   Y   |   '   |       |
  * |       |   A   |   R   |   S   |   T   |   G   |--------------------------------------|   M   |   N   |   E   |   I   |   O   |       |
  * |       |   Z   |   X   |   C   |   D   |   V   |  XXX  |----------------------|  XXX  |   K   |   H   |   ,   |   .   |   /   |       |
  *                                 |  XXX  |  ESC  |  SPC  | TAB   |------|  RET  |  BSPC |  DEL  |  XXX  |
@@ -73,13 +73,13 @@
 /* FLAT QWERTY
  * --------------------------------------------------------------------------------------------------------------------------------------
  * |       |   Q   |   W   |   E   |   R   |   T   |------------------------------------ |   Y   |   U   |   I   |   O   |   P   |       |
- * |       |   A   |   S   |   D   |   F   |   G   |-------------------------------------|   H   |   J   |   K   |   L   |   ;   |       |
+ * |       |   A   |   S   |   D   |   F   |   G   |-------------------------------------|   H   |   J   |   K   |   L   |   '   |       |
  * |       |   Z   |   X   |   C   |   V   |   B   |  XXX  |---------------------|  XXX  |   N   |   M   |   ,   |   .   |   /   |       |
  *                                 |  XXX  |  ESC  |  SPC  | TAB   |-----|  RET  |  BSPC |  DEL  | CMENU |
  */
                         bindings = <
 &none    &kp Q    &kp W    &kp E    &kp  R    &kp  T                                                                          &kp  Y    &kp U     &kp I    &kp O    &kp P    &none
-&none    &kp A    &kp S    &kp D    &kp  F    &kp  G                                                                          &kp  H    &kp J     &kp K    &kp L    &kp SEMI &none
+&none    &kp A    &kp S    &kp D    &kp  F    &kp  G                                                                          &kp  H    &kp J     &kp K    &kp L    &kp SQT &none
 &none    &kp Z    &kp X    &kp C    &kp  V    &kp  B      &none                                            &none    &kp  N    &kp  M    &kp COMMA &kp DOT  &kp  SLASH    &none
                                               &mo NAV_L   &kp ESC    &kp SPACE    &kp TAB         &kp RET    &kp BSPC &kp DEL   &mo NAV_L
                         >;
@@ -90,13 +90,13 @@
 /* SHIFTED QWERTY
  * --------------------------------------------------------------------------------------------------------------------------------------
  * |       |   `   |   Q   |   W   |   E   |   R   |------------------------------------ |   Y   |   U   |   I   |   O   |   P   |       |
- * |       |  CTRL |   A   |   S   |   D   |   F   |-------------------------------------|   H   |   J   |   K   |   L   |   ;   |       |
+ * |       |  CTRL |   A   |   S   |   D   |   F   |-------------------------------------|   H   |   J   |   K   |   L   |   '   |       |
  * |       | SHIFT |   Z   |   X   |   C   |   V   |  XXX  |---------------------|  XXX  |   N   |   M   |   ,   |   .   |   /   |       |
  *                                 |  XXX  |  ESC  |  SPC  | TAB   |-----|  RET  |  BSPC |  DEL  | CMENU |
  */
                         bindings = <
 &none    &kp GRAVE &kp Q    &kp W    &kp E    &kp  R                                                                          &kp  Y    &kp U     &kp I    &kp O    &kp P    &none
-&none    &kp LCTRL &kp A    &kp S    &kp D    &kp  F                                                                          &kp  H    &kp J     &kp K    &kp L    &kp SEMI &none
+&none    &kp LCTRL &kp A    &kp S    &kp D    &kp  F                                                                          &kp  H    &kp J     &kp K    &kp L    &kp SQT  &none
 &none    &kp LSHFT &kp Z    &kp X    &kp C    &kp  V       &none                                             &none    &kp  N  &kp  M    &kp COMMA &kp DOT  &kp  SLASH    &none
                                               &mo NAV_L    &kp ESC    &kp SPACE    &kp TAB        &kp RET    &kp BSPC &kp DEL &mo NAV_L
                         >;
@@ -107,13 +107,13 @@
 /* FLAT QWERTY
  * --------------------------------------------------------------------------------------------------------------------------------------
  * |       |   Q   |   W   |   E   |   R   |   T   |------------------------------------ |   Y   |   U   |   I   |   O   |   P   |       |
- * |       |   A   |   S   |   D   |   F   |   G   |-------------------------------------|   H   |   J   |   K   |   L   |   ;   |       |
+ * |       |   A   |   S   |   D   |   F   |   G   |-------------------------------------|   H   |   J   |   K   |   L   |   '   |       |
  * |       |   Z   |   X   |   C   |   V   |   B   |  XXX  |---------------------|  XXX  |   N   |   M   |   ,   |   .   |   /   |       |
  *                                 |  XXX  |  ESC  |  SPC  | TAB   |-----|  RET  |  BSPC |  DEL  | CMENU |
  */
                         bindings = <
 &none    &kp Q     &kp W     &kp E     &kp  R      &kp  T                                                                          &kp  Y    &kp U     &kp UP   &kp O    &kp P    &none
-&none    &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT   &kp  G                                                                          &kp  H    &kp LEFT &kp DOWN &kp RIGHT &kp SEMI &none
+&none    &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT   &kp  G                                                                          &kp  H    &kp LEFT &kp DOWN &kp RIGHT &kp SQT &none
 &none    &kp Z     &kp X     &kp C     &kp  V      &kp  B      &none                                            &none    &kp  N    &kp  M    &kp COMMA &kp DOT  &kp  SLASH    &none
                                        &mo NAV_L   &kp ESC     &kp SPACE    &kp TAB         &kp RET    &kp BSPC &kp DEL  &mo NAV_L
                         >;
