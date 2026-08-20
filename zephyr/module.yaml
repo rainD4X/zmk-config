@@ -1,0 +1,5 @@
+name: zmk-keyboard-hillside46
+
+build:
+  settings:
+    board_root: .
